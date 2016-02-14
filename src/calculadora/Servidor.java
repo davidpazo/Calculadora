@@ -12,6 +12,7 @@ import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -54,19 +55,19 @@ public class Servidor {
             int operacion = Integer.parseInt(numeros[2]);
             if (operacion == 1) {
                 System.out.println(numeros[0] + "+" + numeros[1]);
-                System.out.println("Resultado: " + (Integer.valueOf(numeros[0]) + Integer.valueOf(numeros[1])));
+                JOptionPane.showMessageDialog(null,"Resultado: " + (Integer.valueOf(numeros[0]) + Integer.valueOf(numeros[1])));
             }
             if (operacion == 2) {
                 System.out.println(numeros[0] + "-" + numeros[1]);
-                System.out.println("Resultado: " + (Integer.valueOf(numeros[0]) - Integer.valueOf(numeros[1])));
+                JOptionPane.showMessageDialog(null,"Resultado: " + (Integer.valueOf(numeros[0]) - Integer.valueOf(numeros[1])));
             }
             if (operacion == 3) {
                 System.out.println(numeros[0] + "*" + numeros[1]);
-                System.out.println("Resultado: " + (Integer.valueOf(numeros[0]) * Integer.valueOf(numeros[1])));
+                JOptionPane.showMessageDialog(null,"Resultado: " + (Integer.valueOf(numeros[0]) * Integer.valueOf(numeros[1])));
             }
             if (operacion == 4) {
                 System.out.println(numeros[0] + "/" + numeros[1]);
-                System.out.println("Resultado: " + (Integer.valueOf(numeros[0]) / Integer.valueOf(numeros[1])));
+                JOptionPane.showMessageDialog(null,"Resultado: " + (Integer.valueOf(numeros[0]) / Integer.valueOf(numeros[1])));
             }
         } catch (IOException ex) {
             System.out.println("ERROR de IO: " + ex);
